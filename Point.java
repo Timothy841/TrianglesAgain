@@ -9,8 +9,10 @@ public class Point{
   }
 
   public Point(Point p){
-  x = p.x;
-  y = p.y;
+    if (p!= null){
+      x = p.x;
+      y = p.y;
+    }
   }
 
   public double getX(){
@@ -26,6 +28,6 @@ public class Point{
   }
 
   public boolean equals(Point other){
-    return (this.x==other.x && this.y==other.y);
+    return other != null && this.x==other.x && this.y==other.y;
   }
 }
